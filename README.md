@@ -42,9 +42,9 @@
     cat the pretraining weight first:
      ```
      cd checkpoint
-    cat cat BSAFusion_CT* > BSAFusion_CT.pkl
-    cat cat BSAFusion_PET* > BSAFusion_PET.pkl
-    cat cat BSAFusion_SPECT* > BSAFusion_SPECT.pkl
+    cat BSAFusion_CT* > BSAFusion_CT.pkl
+    cat BSAFusion_PET* > BSAFusion_PET.pkl
+    cat BSAFusion_SPECT* > BSAFusion_SPECT.pkl
     ```
     run test code:
      ```
