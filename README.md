@@ -19,18 +19,34 @@
 
 ## Usage
 
-1. All images are normalized to [0,1].
-2. make a csv file use your data
- ```
-python /data/make_csv.py
-```
 
-3. Train:
- ```
-python BSAFusion_train.py
-```
+1. Data Preparation
 
-4. Test:
- ```
-python BSAFusion_test.py
-```
+    Download datasets form: http://www.med.harvard.edu/aanlib/
+
+    All images are normalized to [0,1].
+
+
+2. Train:
+
+    make a csv file use your data
+     ```
+    python /data/make_csv.py
+    ```
+     ```
+    python BSAFusion_train.py
+    ```
+
+3. Test:
+
+    cat the pretraining weight first:
+     ```
+     cd checkpoint
+    cat cat BSAFusion_CT* > BSAFusion_CT.pkl
+    cat cat BSAFusion_PET* > BSAFusion_PET.pkl
+    cat cat BSAFusion_SPECT* > BSAFusion_SPECT.pkl
+    ```
+    run test code:
+     ```
+    python BSAFusion_test.py
+    ```
