@@ -33,6 +33,8 @@
      ```
     python /data/make_csv.py
     ```
+     
+    start training
      ```
     python BSAFusion_train.py
     ```
