@@ -88,7 +88,7 @@ def train(modal,
 
     """resume training"""
     if resume:
-        checkpoint = torch.load(os.path.join('./checkpoint/checkpoint', 'checkpoint_999.pkl'), map_location=torch.device('cpu'))  # load文件
+        checkpoint = torch.load(os.path.join('./checkpoint/checkpoint', 'checkpoint_123.pkl'), map_location=torch.device('cpu'))  # load文件
         encoder.load_state_dict(checkpoint['encoder_state_dict'])
         transfer.load_state_dict(checkpoint['transfer_state_dict'])
         reg_net.load_state_dict(checkpoint['reg_net_state_dict'])
@@ -226,7 +226,7 @@ def train(modal,
                 'reg_loss_values':reg_loss_values,
                 "fusion_loss_value":fusion_loss_value,
             }
-            path_checkpoint = "./checkpoint/checkpoint/checkpoint_999.pkl"
+            path_checkpoint = "./checkpoint/checkpoint/checkpoint_123.pkl"
             if not os.path.exists('./checkpoint/checkpoint'):
                 os.mkdir('./checkpoint/checkpoint')
             torch.save(checkpoint, path_checkpoint)
@@ -236,7 +236,7 @@ def train(modal,
         "transfer_state_dict": transfer.state_dict(),
         "reg_net_state_dict": reg_net.state_dict(),
         "fusion_net_state_dict": fusion_net.state_dict()}
-    torch.save(checkpoint_, os.path.join(checkpoint_path, f'BSAFusion_999_{modal}.pkl'))
+    torch.save(checkpoint_, os.path.join(checkpoint_path, f'BSAFusion_123_{modal}.pkl'))
     print("Training is complected")
 
 
