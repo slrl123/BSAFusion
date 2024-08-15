@@ -249,12 +249,6 @@ if __name__ == '__main__':
     beta1 = 0.9
     beta2 = 0.999
     resume = False
-    a = 1.0  # recon损失平衡参数
-    b = 3.0  # sim损失平衡参数
-    c = 3.0 # flow平滑损失
-    d = 2.0  # flow 平衡参数
-    e = 0.0  # dice 平衡参数
-    f = 1.0  # ncc 平衡参数
 
     train(modal,
           train_batch_size,
